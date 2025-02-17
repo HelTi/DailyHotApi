@@ -420,4 +420,35 @@ export type RouterType = {
     url: string;
     source: string;
   };
+  jin10: {
+    id: string | number;
+    title: string;
+    introduction: string;
+    mobile_thumbs: string;
+    display_datetime: string;
+    source_url: string;
+    source: string;
+  };
+  wallstreet: {
+    id: string | number;
+    title: string;
+    display_time: string;
+    uri: string;
+    pageviews: number;
+  };
+
+  yicai: {
+    title: string;
+    link: string | undefined;
+    imgSrc: string | undefined;
+    description: string;
+    time: string;
+    hot: number;
+  };
+  caixin: {
+    title: string;
+    link: string | undefined;
+    imgSrc: string | undefined;
+    author: string;
+  };
 };
