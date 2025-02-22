@@ -67,8 +67,8 @@ const getList = async (options: Options, noCache: boolean): Promise<RouterResTyp
         author: item.authorName,
         timestamp: getTime(v.publishTime),
         hot: item.statCollect || undefined,
-        url: `https://www.36kr.com/p/${v.itemId}`,
-        mobileUrl: `https://m.36kr.com/p/${v.itemId}`,
+        url: `https://www.36kr.com/${type=== 'video' ? 'video' : 'p'}/${v.itemId}`,
+        mobileUrl: `https://m.36kr.com/${type=== 'video' ? 'video' : 'p'}/${v.itemId}`,
       };
     }),
   };
