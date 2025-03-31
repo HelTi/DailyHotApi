@@ -24,6 +24,9 @@ const getList = async (noCache: boolean) => {
     ...result,
     data: list.map((v: RouterType["zhihu"]) => {
       const data = v.target;
+      const q_id= v?.card_id.split('_')[1] || data?.id
+      const url = `https://www.zhihu.com/question/${q_id}`
+      const mobileUrl = `https://www.zhihu.com/question/${q_id}`
       return {
         id: data.id,
         title: data.title,
@@ -31,8 +34,8 @@ const getList = async (noCache: boolean) => {
         cover: v.children[0].thumbnail,
         timestamp: getTime(data.created),
         hot: parseFloat(v.detail_text.split(" ")[0]) * 10000,
-        url: `https://www.zhihu.com/question/${data.id}`,
-        mobileUrl: `https://www.zhihu.com/question/${data.id}`,
+        url,
+        mobileUrl,
       };
     }),
   };

@@ -90,6 +90,7 @@ export type RouterType = {
     onboard_time: number;
   };
   zhihu: {
+    card_id: string;
     target: {
       id: number;
       title: string;
